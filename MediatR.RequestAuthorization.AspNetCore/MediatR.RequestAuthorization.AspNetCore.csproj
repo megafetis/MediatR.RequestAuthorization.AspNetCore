@@ -6,7 +6,7 @@
     <Copyright>Copyright Evgeniy Fetisov</Copyright>
     <PackageLicenseUrl>https://github.com/megafetis/MediatR.RequestAuthorization/blob/master/LICENSE.txt</PackageLicenseUrl>
     <PackageId>MediatR.RequestAuthorization.AspNetCore</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <RepositoryUrl>git://github.com/megafetis/MediatR.RequestAuthorization.AspNetCore</RepositoryUrl>
     <PackageProjectUrl>https://github.com/megafetis/MediatR.RequestAuthorization.AspNetCore</PackageProjectUrl>
     <RepositoryType>git</RepositoryType>
@@ -19,7 +19,7 @@
     <PackageIcon>logo.png</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="MediatR.RequestAuthorization" Version="1.0.0" />
+    <PackageReference Include="MediatR.RequestAuthorization" Version="1.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.0.0" />
     <PackageReference Include="UTypeExtensions" Version="1.0.0.2" />

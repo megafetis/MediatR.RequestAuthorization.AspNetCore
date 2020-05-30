@@ -16,6 +16,12 @@ namespace MediatR.RequestAuthorization.AspNetCore
             Http = http;
             User = http?.HttpContext?.User;
         }
+
+        public virtual string ExtraAttribute(string key)
+        {
+            return null;
+        }
+
         public ClaimsPrincipal User { get; }
         public string Id
         {
@@ -31,17 +37,17 @@ namespace MediatR.RequestAuthorization.AspNetCore
         }
         public string Name => User?.Identity.Name;
         public bool IsAuthenticated => User?.Identity != null && User.Identity.IsAuthenticated;
-        public string ClaimValue(string claimType)
+        public virtual string ClaimValue(string claimType)
         {
             return User?.Claims?.FirstOrDefault(p => p.Type == claimType)?.Value;
         }
 
-        public bool HasClaim(string type, string value)
+        public virtual bool HasClaim(string type, string value)
         {
             return User?.HasClaim(type, value) ?? false;
         }
 
-        public bool HasClaim(Predicate<Claim> match)
+        public virtual bool HasClaim(Predicate<Claim> match)
         {
             return User?.HasClaim(match) ?? false;
         }
