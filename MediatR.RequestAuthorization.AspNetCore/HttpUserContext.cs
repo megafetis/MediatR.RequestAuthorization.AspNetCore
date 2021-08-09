@@ -29,7 +29,7 @@ namespace MediatR.RequestAuthorization.AspNetCore
             {
                 if (User?.Identity != null && User.Identity.IsAuthenticated)
                 {
-                    return User.FindFirst(ClaimTypes.NameIdentifier).Value;
+                    return User.Claims.FirstOrDefault(p=>p.Type == ClaimTypes.NameIdentifier)?.Value ?? User.Claims.FirstOrDefault(p => p.Type =="sub")?.Value;
                 }
 
                 return null;
